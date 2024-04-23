@@ -11,10 +11,12 @@ public class CatPickup : MonoBehaviour
     }
    public void OnMouseDown(){
          animator.SetBool("isPickedUp", true);
+         Debug.Log("Mouse Down");
    }
 
    public void OnMouseUp(){
          animator.SetBool("isPickedUp", false);
+            Debug.Log("Mouse Up");
    }
 
     public void OnMouseDrag(){
