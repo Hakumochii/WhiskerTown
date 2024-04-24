@@ -36,6 +36,10 @@ Shader "Custom/ExactColorSwap"
         _TargetColor15("Target Color 15", Color) = (1,1,1,1)
         _OriginalColor16("Original Color 16", Color) = (1,1,1,1)
         _TargetColor16("Target Color 16", Color) = (1,1,1,1)
+        _OriginalColor17("Original Color 16", Color) = (1,1,1,1)
+        _TargetColor17("Target Color 16", Color) = (1,1,1,1)
+        _OriginalColor18("Original Color 16", Color) = (1,1,1,1)
+        _TargetColor18("Target Color 16", Color) = (1,1,1,1)
         _Tolerance("Tolerance", Range(0, 1)) = 0.001  
     }
  
@@ -100,6 +104,10 @@ Shader "Custom/ExactColorSwap"
             float4 _TargetColor15;
             float4 _OriginalColor16;
             float4 _TargetColor16;
+            float4 _OriginalColor17;
+            float4 _TargetColor17;
+            float4 _OriginalColor18;
+            float4 _TargetColor18;
             float _Tolerance;
  
             v2f vert(appdata v)
@@ -183,6 +191,14 @@ Shader "Custom/ExactColorSwap"
                 else if (length(col - _OriginalColor16) < _Tolerance)
                 {
                     return half4(_TargetColor16.rgb, col.a);
+                }
+                else if (length(col - _OriginalColor17) < _Tolerance)
+                {
+                    return half4(_TargetColor17.rgb, col.a);
+                }
+                else if (length(col - _OriginalColor18) < _Tolerance)
+                {
+                    return half4(_TargetColor18.rgb, col.a);
                 }
  
                 return col;
