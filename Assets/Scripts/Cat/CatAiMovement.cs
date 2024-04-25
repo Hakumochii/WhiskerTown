@@ -7,9 +7,8 @@ public class CatAiMovement : MonoBehaviour
     public Animator animator;
     private Vector2 minBounds;
     private Vector2 maxBounds;
-
-    // The movement speed of the object
-    public float moveSpeed = 0.2f;
+    public float movementSpeed = 1.0f;
+    public float layDownTime = 5.0f;
 
     // A minimum and maximum time delay for taking a decision, choosing a direction to move in
     public Vector2 decisionTime = new Vector2(1, 4);
@@ -34,7 +33,7 @@ public class CatAiMovement : MonoBehaviour
     {
         // Cache the transform for quicker access
         thisTransform = transform;
-
+        animator = GetComponent<Animator>();
         // Set a random time delay for taking a decision (changing direction, or standing in place for a while)
         decisionTimeCount = Random.Range(decisionTime.x, decisionTime.y);
         animator.SetBool("isStanding", true);
@@ -53,7 +52,7 @@ public class CatAiMovement : MonoBehaviour
             float xDir = direction.x;
             float yDir = direction.y;
 
-            Vector3 newPosition = thisTransform.position + direction * Time.deltaTime * moveSpeed;
+            Vector3 newPosition = thisTransform.position + direction * Time.deltaTime * movementSpeed;
 
             // Clamp the new position within the specified bounds
             newPosition.x = Mathf.Clamp(newPosition.x, minBounds.x, maxBounds.x);
@@ -74,7 +73,7 @@ public class CatAiMovement : MonoBehaviour
                 if (randomChoice == 0)
                 {
                     // Lay down for 10 seconds
-                    StartCoroutine(LayDownForSeconds(10f));
+                    StartCoroutine(LayDownForSeconds());
                     animator.SetBool("isLayingDown", true);
                     animator.SetBool("isStanding", false);
                     isBusy = true; // Cat is busy, disable movement
@@ -99,10 +98,10 @@ public class CatAiMovement : MonoBehaviour
         }
     }
 
-    IEnumerator LayDownForSeconds(float seconds)
+    protected IEnumerator LayDownForSeconds()
     {
         // Perform the lay down action
-        yield return new WaitForSeconds(seconds);
+        yield return new WaitForSeconds(layDownTime);
         // Resume normal behavior after laying down
         animator.SetBool("isLayingDown", false);
         animator.SetBool("isStanding", true);
