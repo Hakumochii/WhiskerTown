@@ -89,35 +89,35 @@ public class PaintingManager : MonoBehaviour
                 }
             case Yellow:
                 {
-                    currentColorName = Black;
+                    currentColorName = Yellow;
                     currentHexCode = ColoringPens[currentColorName];
                     Debug.Log("Current color: " + currentColorName + ". Current hexCode: " + currentHexCode);
                     break;
                 }
             case Green:
                 {
-                    currentColorName = Black;
+                    currentColorName = Green;
                     currentHexCode = ColoringPens[currentColorName];
                     Debug.Log("Current color: " + currentColorName + ". Current hexCode: " + currentHexCode);
                     break;
                 }
             case Blue:
                 {
-                    currentColorName = Black;
+                    currentColorName = Blue;
                     currentHexCode = ColoringPens[currentColorName];
                     Debug.Log("Current color: " + currentColorName + ". Current hexCode: " + currentHexCode);
                     break;
                 }
             case Purple:
                 {
-                    currentColorName = Black;
+                    currentColorName = Purple;
                     currentHexCode = ColoringPens[currentColorName];
                     Debug.Log("Current color: " + currentColorName + ". Current hexCode: " + currentHexCode);
                     break;
                 }
             case Red:
                 {
-                    currentColorName = Black;
+                    currentColorName = Red;
                     currentHexCode = ColoringPens[currentColorName];
                     Debug.Log("Current color: " + currentColorName + ". Current hexCode: " + currentHexCode);
                     break;
@@ -256,14 +256,12 @@ public class PaintingManager : MonoBehaviour
             // Create a ray from the mouse position
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-
             // Check if the ray hits any colliders in the scene
             if (Physics.Raycast(ray, out hit))
             {
                 //Check if the GameObject hit by the ray has the "ColoringPen" tag
                 if (hit.collider.CompareTag("ColoringPen"))
                 {
-                    Debug.Log("Hello");
                     SelectPens(hit);
                 }
                 // Check if the GameObject hit by the ray has the "Paintable" tag
@@ -274,6 +272,7 @@ public class PaintingManager : MonoBehaviour
                     {
                         // Calls Paint() with the accesed spriteRenderer component as argument
                         Paint(spriteRenderer);
+                        Debug.Log("Painting now");
                     }
                     else
                     {

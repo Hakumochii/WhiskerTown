@@ -13,7 +13,7 @@ TagManager:
   - ObstacleLayer
   - Water
   - UI
-  - 
+  - Background
   - 
   - 
   - 
@@ -43,6 +43,14 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+<<<<<<< Updated upstream
   - name: Interactable
     uniqueID: 1250485407
+=======
+  - name: Background
+    uniqueID: 3628418607
+    locked: 0
+  - name: UI
+    uniqueID: 197077979
+>>>>>>> Stashed changes
     locked: 0
