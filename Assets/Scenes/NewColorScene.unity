@@ -1426,6 +1426,15 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  chosenCat: {fileID: 0}
+  chosenCatPrefab: {fileID: 0}
+  chosenList: []
+  dataOfColors: []
+  catPrefabSprites: []
+  sceneName: 
+  chosenCat: []
+  chosencolors: []
+  catobject: {fileID: 0}
 --- !u!4 &978083713
 Transform:
   m_ObjectHideFlags: 0
@@ -1712,21 +1721,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CatManager, Assembly-CSharp
-        m_MethodName: OnDoneButtonPressed
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1016624022}
-        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: changeScene
+      - m_Target: {fileID: 1650986906}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: InstantiateCat
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2087,9 +2084,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 824048033}
-        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: changeScene
+      - m_Target: {fileID: 1650986906}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: SaveData
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2309,6 +2306,12 @@ MonoBehaviour:
   - {fileID: 4746625166003990097}
   - {fileID: 4594308244978187434}
   - {fileID: 4590547023184429299}
+  chosenCat: {fileID: 0}
+  chosenCatPrefab: {fileID: 0}
+  chosenList: []
+  dataOfColors: []
+  catPrefabSprites: []
+  sceneName: 
 --- !u!4 &1650986907
 Transform:
   m_ObjectHideFlags: 0

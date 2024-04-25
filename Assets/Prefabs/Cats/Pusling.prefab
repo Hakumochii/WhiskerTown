@@ -1037,7 +1037,7 @@ GameObject:
   - component: {fileID: 7924317863987377780}
   - component: {fileID: 2837305492793704759}
   m_Layer: 3
-  m_Name: PuslingCat
+  m_Name: Pusling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
