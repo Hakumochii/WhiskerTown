@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PaintingManager : MonoBehaviour
 {
+    public MenuManager menuManager;
     public string currentColorName;
     public string currentHexCode;
     public Color currentColor;
@@ -42,7 +43,7 @@ public class PaintingManager : MonoBehaviour
         Debug.Log("Current color: " + currentColorName + ". Current hexCode: " + currentHexCode);
     }
 
-    public void SelectPens(RaycastHit hit)
+    public void SelectPens(RaycastHit2D hit)
     {
         switch (hit.collider.gameObject.name)
         {
@@ -254,19 +255,26 @@ public class PaintingManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             // Create a ray from the mouse position
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
+            Vector2 ray = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            // RaycastHit hit;
+
+            RaycastHit2D hit = Physics2D.Raycast(ray, Vector2.zero);
+            Debug.Log("Clicking");
             // Check if the ray hits any colliders in the scene
-            if (Physics.Raycast(ray, out hit))
+            if (hit.collider != null)
             {
+                Debug.Log(hit.collider.tag);
                 //Check if the GameObject hit by the ray has the "ColoringPen" tag
                 if (hit.collider.CompareTag("ColoringPen"))
                 {
+                    Debug.Log("pen selected");
                     SelectPens(hit);
                 }
+
                 // Check if the GameObject hit by the ray has the "Paintable" tag
                 else if (hit.collider.CompareTag("Paintable"))
                 {
+                    Debug.Log("Paintable detected");
                     SpriteRenderer spriteRenderer = hit.collider.GetComponent<SpriteRenderer>();
                     if (spriteRenderer != null)
                     {
@@ -274,32 +282,36 @@ public class PaintingManager : MonoBehaviour
                         Paint(spriteRenderer);
                         Debug.Log("Painting now");
                     }
-                    else
-                    {
-                        // No Image component found
-                        Debug.LogError("Clicked on GameObject without SpriteRenderer component.");
-                    }
+                }
+
+                else if (hit.collider.CompareTag("Button1"))
+                {
+                    menuManager.MuslingClick();
+                }
+
+                else if (hit.collider.CompareTag("Button2"))
+                {
+                    menuManager.PuslingClick();
+                }
+                else if (hit.collider.CompareTag("Button3"))
+                {
+                    menuManager.MislingClick();
                 }
                 else
                 {
                     // GameObjects with collider without Tag found
                     Debug.LogError("Clicked on GameObject with a different tag.");
                 }
-                // Check if the GameObject hit by the ray has an SpriteRenderer component   
-            }
-            else
-            {
-                // No GameObject hit by the ray
-                Debug.Log("No GameObject clicked.");
             }
         }
-    }
 
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
+        // Start is called before the first frame update
+        void Start()
+        {
 
+        }
     }
 }
+

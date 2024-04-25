@@ -3,12 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - ColoringPen
+  - Paintable
+  - Button
+  - Button1
+  - Button2
+  - Button3
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - RayCast
   - Water
   - UI
   - Cat Layer
@@ -40,4 +46,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3083657861
+    locked: 0
+  - name: RayCast
+    uniqueID: 3125166917
     locked: 0
