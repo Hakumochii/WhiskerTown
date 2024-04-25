@@ -10,7 +10,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - RayCast
   - Water
   - UI
   - Cat Layer
@@ -43,6 +43,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: UI
+  - name: Background
     uniqueID: 3083657861
+    locked: 0
+  - name: RayCast
+    uniqueID: 3125166917
     locked: 0
