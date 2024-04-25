@@ -6,9 +6,20 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     public string sceneName;
-   
     public void changeScene() 
     {
         SceneManager.LoadScene(sceneName);
     }
+
+    void Update()
+    {
+     if (sceneName == "StickerScroll")
+        {
+            CatManager catManager = FindObjectOfType<CatManager>();
+            catManager.SaveCatData();
+        }
+    }
+    
+
+    
 }
