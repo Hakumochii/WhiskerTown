@@ -1377,8 +1377,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a9548c3708984543aec9b53c0fe5025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chosenCat: {fileID: 0}
-  chosenColors: []
 --- !u!4 &978083713
 Transform:
   m_ObjectHideFlags: 0
@@ -1473,6 +1471,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1016624020}
   - component: {fileID: 1016624021}
+  - component: {fileID: 1016624022}
   m_Layer: 5
   m_Name: sceneManger
   m_TagString: Untagged
@@ -1500,6 +1499,18 @@ RectTransform:
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1016624021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016624019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a9548c3708984543aec9b53c0fe5025, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1016624022
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1666,6 +1677,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1016624021}
+        m_TargetAssemblyTypeName: CatManager, Assembly-CSharp
+        m_MethodName: OnDoneButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1016624022}
         m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
         m_MethodName: changeScene
         m_Mode: 1

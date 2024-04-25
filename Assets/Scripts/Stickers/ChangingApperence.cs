@@ -50,4 +50,6 @@ public class ChangingApperence : MonoBehaviour
             selectedHatIndex = index;
         }
     }
+
+
 }
