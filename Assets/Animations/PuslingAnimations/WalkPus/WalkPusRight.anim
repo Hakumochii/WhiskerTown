@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MusWalkRight
+  m_Name: WalkPusRight
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -55,7 +55,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_FlipX
-    path: MuslingColor
+    path: PuslingLine
     classID: 212
     script: {fileID: 0}
     flags: 0
@@ -63,15 +63,15 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 21300000, guid: 959b5c08677664326aa4d32dbf1799d5, type: 3}
+      value: {fileID: 21300000, guid: 18f44dc3fbbf746d6baadf927864db3a, type: 3}
     - time: 0.13333334
-      value: {fileID: 21300000, guid: 56ccd06eb2edb4754991332f1b472d9f, type: 3}
+      value: {fileID: 21300000, guid: b1b8d8ed36ada42dc9db70d50a1927f3, type: 3}
     - time: 0.25
-      value: {fileID: 21300000, guid: 9a23e155ccff7418592180eba3bbe01d, type: 3}
+      value: {fileID: 21300000, guid: af03757d5364a44bb81fd1172ec2e772, type: 3}
     - time: 0.36666667
-      value: {fileID: 21300000, guid: c7ebed9f435ba40818d9051de8475154, type: 3}
+      value: {fileID: 21300000, guid: 008762e4078c34faf8d7d507486b5dbb, type: 3}
     - time: 0.5
-      value: {fileID: 21300000, guid: fa8871f7bef0e4da7ab76affd4a96a4a, type: 3}
+      value: {fileID: 21300000, guid: 98d859c567eb7477387524ebf5c270cc, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -80,17 +80,17 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 21300000, guid: e46be116d58e44c249dde1a470fe2c62, type: 3}
+      value: {fileID: 21300000, guid: 45927241125c84d748a6c4c641f003f4, type: 3}
     - time: 0.13333334
-      value: {fileID: 21300000, guid: a96d4572a534b46b0b1098d5cc7a571e, type: 3}
+      value: {fileID: 21300000, guid: 6e3fb7cbb1bf54ada802a943994c1052, type: 3}
     - time: 0.25
-      value: {fileID: 21300000, guid: e1256d6e95b7344bd8e41aa5ab19dbe1, type: 3}
+      value: {fileID: 21300000, guid: 5f670fa946a224e7d96b0721a8a60fce, type: 3}
     - time: 0.36666667
-      value: {fileID: 21300000, guid: 3a681b1297b4145c88a62527533bcc0a, type: 3}
+      value: {fileID: 21300000, guid: 9739fea62513d4d3793b4eca6f325a2a, type: 3}
     - time: 0.5
-      value: {fileID: 21300000, guid: ae5988c6ce25f41e191d28ed88aa576c, type: 3}
+      value: {fileID: 21300000, guid: c672c13f6693f4ce0bb789387bc95fd1, type: 3}
     attribute: m_Sprite
-    path: MuslingColor
+    path: PuslingLine
     classID: 212
     script: {fileID: 0}
     flags: 2
@@ -111,7 +111,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 2636964305
+      path: 445866085
       attribute: 555744692
       script: {fileID: 0}
       typeID: 212
@@ -129,7 +129,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 2636964305
+      path: 445866085
       attribute: 0
       script: {fileID: 0}
       typeID: 212
@@ -138,16 +138,16 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 959b5c08677664326aa4d32dbf1799d5, type: 3}
-    - {fileID: 21300000, guid: 56ccd06eb2edb4754991332f1b472d9f, type: 3}
-    - {fileID: 21300000, guid: 9a23e155ccff7418592180eba3bbe01d, type: 3}
-    - {fileID: 21300000, guid: c7ebed9f435ba40818d9051de8475154, type: 3}
-    - {fileID: 21300000, guid: fa8871f7bef0e4da7ab76affd4a96a4a, type: 3}
-    - {fileID: 21300000, guid: e46be116d58e44c249dde1a470fe2c62, type: 3}
-    - {fileID: 21300000, guid: a96d4572a534b46b0b1098d5cc7a571e, type: 3}
-    - {fileID: 21300000, guid: e1256d6e95b7344bd8e41aa5ab19dbe1, type: 3}
-    - {fileID: 21300000, guid: 3a681b1297b4145c88a62527533bcc0a, type: 3}
-    - {fileID: 21300000, guid: ae5988c6ce25f41e191d28ed88aa576c, type: 3}
+    - {fileID: 21300000, guid: 18f44dc3fbbf746d6baadf927864db3a, type: 3}
+    - {fileID: 21300000, guid: b1b8d8ed36ada42dc9db70d50a1927f3, type: 3}
+    - {fileID: 21300000, guid: af03757d5364a44bb81fd1172ec2e772, type: 3}
+    - {fileID: 21300000, guid: 008762e4078c34faf8d7d507486b5dbb, type: 3}
+    - {fileID: 21300000, guid: 98d859c567eb7477387524ebf5c270cc, type: 3}
+    - {fileID: 21300000, guid: 45927241125c84d748a6c4c641f003f4, type: 3}
+    - {fileID: 21300000, guid: 6e3fb7cbb1bf54ada802a943994c1052, type: 3}
+    - {fileID: 21300000, guid: 5f670fa946a224e7d96b0721a8a60fce, type: 3}
+    - {fileID: 21300000, guid: 9739fea62513d4d3793b4eca6f325a2a, type: 3}
+    - {fileID: 21300000, guid: c672c13f6693f4ce0bb789387bc95fd1, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -207,7 +207,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_FlipX
-    path: MuslingColor
+    path: PuslingLine
     classID: 212
     script: {fileID: 0}
     flags: 0

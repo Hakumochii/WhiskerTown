@@ -1,31 +1,33 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Numerics;
 using UnityEngine;
 
 public class CatAiMovement : MonoBehaviour
 {
     internal Transform thisTransform;
     public Animator animator;
-    private UnityEngine.Vector2 minBounds;
-    private UnityEngine.Vector2 maxBounds;
+    private Vector2 minBounds;
+    private Vector2 maxBounds;
 
     // The movement speed of the object
     public float moveSpeed = 0.2f;
 
     // A minimum and maximum time delay for taking a decision, choosing a direction to move in
-    public UnityEngine.Vector2 decisionTime = new UnityEngine.Vector2(1, 4);
+    public Vector2 decisionTime = new Vector2(1, 4);
     internal float decisionTimeCount = 0;
 
     // The possible directions that the object can move in: right, left, up, down, and zero for staying in place.
-    internal UnityEngine.Vector3[] moveDirections = new UnityEngine.Vector3[] { 
-        UnityEngine.Vector3.right, 
-        UnityEngine.Vector3.left, 
-        UnityEngine.Vector3.up, 
-        UnityEngine.Vector3.down, 
-        UnityEngine.Vector3.zero, 
-        UnityEngine.Vector3.zero };
+    internal Vector3[] moveDirections = new Vector3[] { 
+        Vector3.right, 
+        Vector3.left, 
+        Vector3.up, 
+        Vector3.down, 
+        Vector3.zero, 
+        Vector3.zero,
+        Vector3.zero};
     internal int currentMoveDirection;
+
+    // Boolean to track if the cat is laying down or idle
+    private bool isBusy = false;
 
     // Use this for initialization
     void Start()
@@ -35,47 +37,86 @@ public class CatAiMovement : MonoBehaviour
 
         // Set a random time delay for taking a decision (changing direction, or standing in place for a while)
         decisionTimeCount = Random.Range(decisionTime.x, decisionTime.y);
+        animator.SetBool("isStanding", true);
 
-
-        minBounds = Camera.main.ScreenToWorldPoint(UnityEngine.Vector2.zero); // Bottom-left corner of the screen
-        maxBounds = Camera.main.ScreenToWorldPoint(new UnityEngine.Vector2(Screen.width, Screen.height)); 
-
-        // Choose a movement direction, or stay in place
-        ChooseMoveDirection();
+        minBounds = Camera.main.ScreenToWorldPoint(Vector2.zero); // Bottom-left corner of the screen
+        maxBounds = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));      
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Move the object in the chosen direction at the set speed
-        UnityEngine.Vector3 direction = moveDirections[currentMoveDirection];
-        float xDir = direction.x;
-        float yDir = direction.y;
-
-        UnityEngine.Vector3 newPosition = thisTransform.position + direction * Time.deltaTime * moveSpeed;
-
-        // Clamp the new position within the specified bounds
-        newPosition.x = Mathf.Clamp(newPosition.x, minBounds.x, maxBounds.x);
-        newPosition.y = Mathf.Clamp(newPosition.y, minBounds.y, maxBounds.y);
-
-        thisTransform.position = newPosition;
-
-        if (animator)
+        if (!isBusy)
         {
-            animator.SetFloat("MoveX", xDir);
-            animator.SetFloat("MoveY", yDir);
-        }
+            // Move the object in the chosen direction at the set speed
+            Vector3 direction = moveDirections[currentMoveDirection];
+            float xDir = direction.x;
+            float yDir = direction.y;
 
-        if (decisionTimeCount > 0)
-            decisionTimeCount -= Time.deltaTime;
-        else
-        {
-            // Choose a random time delay for taking a decision (changing direction, or standing in place for a while)
-            decisionTimeCount = Random.Range(decisionTime.x, decisionTime.y);
+            Vector3 newPosition = thisTransform.position + direction * Time.deltaTime * moveSpeed;
 
-            // Choose a movement direction, or stay in place
-            ChooseMoveDirection();
+            // Clamp the new position within the specified bounds
+            newPosition.x = Mathf.Clamp(newPosition.x, minBounds.x, maxBounds.x);
+            newPosition.y = Mathf.Clamp(newPosition.y, minBounds.y, maxBounds.y);
+
+            thisTransform.position = newPosition;
+
+            if (animator)
+            {
+                animator.SetFloat("MoveX", xDir);
+                animator.SetFloat("MoveY", yDir);
+            }
+
+            if (moveDirections[currentMoveDirection] == Vector3.zero)
+            {
+                // Choose between being idle or laying down
+                int randomChoice = Random.Range(0, 8);
+                if (randomChoice == 0)
+                {
+                    // Lay down for 10 seconds
+                    StartCoroutine(LayDownForSeconds(10f));
+                    animator.SetBool("isLayingDown", true);
+                    animator.SetBool("isStanding", false);
+                    isBusy = true; // Cat is busy, disable movement
+                }
+                else
+                {
+                    StartCoroutine(IdleForSeconds(6f));
+                    isBusy = true; // Cat is busy, disable movement
+                }
+            }
+
+            if (decisionTimeCount > 0)
+                decisionTimeCount -= Time.deltaTime;
+            else
+            {
+                // Choose a random time delay for taking a decision (changing direction, or standing in place for a while)
+                decisionTimeCount = Random.Range(decisionTime.x, decisionTime.y);
+
+                // Choose a movement direction, or stay in place
+                ChooseMoveDirection();
+            }
         }
+    }
+
+    IEnumerator LayDownForSeconds(float seconds)
+    {
+        // Perform the lay down action
+        yield return new WaitForSeconds(seconds);
+        // Resume normal behavior after laying down
+        animator.SetBool("isLayingDown", false);
+        animator.SetBool("isStanding", true);
+        isBusy = false; // Cat is no longer busy, enable movement
+        ChooseMoveDirection();
+    }
+
+    IEnumerator IdleForSeconds(float seconds)
+    {
+        // Perform the idle action
+        yield return new WaitForSeconds(seconds);
+        // Resume normal behavior after idling
+        isBusy = false; // Cat is no longer busy, enable movement
+        ChooseMoveDirection();
     }
 
     void ChooseMoveDirection()

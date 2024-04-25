@@ -110,6 +110,8 @@ Material:
     - _OriginalColor14: {r: 0.9960785, g: 0.6039216, b: 0.5176471, a: 1}
     - _OriginalColor15: {r: 0.78823537, g: 0.007843138, b: 0.9960785, a: 1}
     - _OriginalColor16: {r: 0.9921569, g: 0.8980393, b: 0.5176471, a: 1}
+    - _OriginalColor17: {r: 1, g: 1, b: 1, a: 1}
+    - _OriginalColor18: {r: 1, g: 1, b: 1, a: 1}
     - _OriginalColor2: {r: 1, g: 0.5294118, b: 0, a: 1}
     - _OriginalColor3: {r: 0.9960785, g: 0.93725497, b: 0.011764707, a: 1}
     - _OriginalColor4: {r: 0.007843138, g: 1, b: 0.9490197, a: 1}
@@ -127,7 +129,9 @@ Material:
     - _TargetColor14: {r: 0.25882354, g: 0.1137255, b: 0.07450981, a: 1}
     - _TargetColor15: {r: 0.25882354, g: 0.1137255, b: 0.07450981, a: 1}
     - _TargetColor16: {r: 0.25882354, g: 0.1137255, b: 0.07450981, a: 1}
-    - _TargetColor2: {r: 0.5890583, g: 0.8396226, b: 0.25743148, a: 1}
+    - _TargetColor17: {r: 1, g: 1, b: 1, a: 1}
+    - _TargetColor18: {r: 1, g: 1, b: 1, a: 1}
+    - _TargetColor2: {r: 0.5845978, g: 0.8113208, b: 0.28702387, a: 1}
     - _TargetColor3: {r: 0.7169812, g: 0.15254916, b: 0, a: 1}
     - _TargetColor4: {r: 0.36990672, g: 0.8301887, b: 0.3250267, a: 1}
     - _TargetColor5: {r: 1, g: 0.8388512, b: 0.19339621, a: 1}
