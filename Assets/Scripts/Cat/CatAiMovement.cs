@@ -69,7 +69,7 @@ public class CatAiMovement : MonoBehaviour
             if (moveDirections[currentMoveDirection] == Vector3.zero)
             {
                 // Choose between being idle or laying down
-                int randomChoice = Random.Range(0, 8);
+                int randomChoice = Random.Range(0, 1);
                 if (randomChoice == 0)
                 {
                     // Lay down for 10 seconds
@@ -95,6 +95,18 @@ public class CatAiMovement : MonoBehaviour
                 // Choose a movement direction, or stay in place
                 ChooseMoveDirection();
             }
+        }
+    }
+
+    public void OnCollision2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "ElGatto")
+        {   
+            // If the cat collides with the player, lay down for 10 seconds
+            StartCoroutine(LayDownForSeconds());
+            animator.SetBool("isLayingDown", true);
+            animator.SetBool("isStanding", false);
+            isBusy = true; // Cat is busy, disable movement
         }
     }
 

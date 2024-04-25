@@ -14,8 +14,5 @@ public class Animal : MonoBehaviour
    {
          Debug.Log("Animal walk");
    }
-   void Start()
-   {
-        MakeSound();
-   }
+    
 }

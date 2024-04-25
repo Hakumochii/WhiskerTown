@@ -11,13 +11,14 @@ GameObject:
   - component: {fileID: 5115961562371295404}
   - component: {fileID: 1483482474252561585}
   - component: {fileID: 7984096158631601338}
-  - component: {fileID: 4352237881683312786}
   - component: {fileID: 6113886975285785626}
   - component: {fileID: 2317546836687666966}
-  - component: {fileID: 4344979277332496150}
-  m_Layer: 6
+  - component: {fileID: 8006788757735391224}
+  - component: {fileID: 911107675942575957}
+  - component: {fileID: 2392461182149674597}
+  m_Layer: 0
   m_Name: CatPrefab_Small
-  m_TagString: Untagged
+  m_TagString: ElGatto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,7 +33,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.61, y: -0.6, z: 0}
-  m_LocalScale: {x: 0.26, y: 0.26, z: 0.26}
+  m_LocalScale: {x: 0.293332, y: 0.293332, z: 0.293332}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1737927347284011308}
@@ -111,33 +112,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!50 &4352237881683312786
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 971676667248606284}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 64
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &6113886975285785626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,7 +142,69 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 7984096158631601338}
   catAiMovement: {fileID: 6113886975285785626}
---- !u!61 &4344979277332496150
+--- !u!50 &8006788757735391224
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971676667248606284}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!70 &911107675942575957
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971676667248606284}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.16125269, y: -3.2787719}
+  m_Size: {x: 9.192669, y: 4.677732}
+  m_Direction: 1
+--- !u!61 &2392461182149674597
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -197,10 +233,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.24603796, y: -0.4428687}
+  m_Offset: {x: -0.10750103, y: 1.7737358}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -211,7 +247,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 11.819453, y: 9.356666}
+  m_Size: {x: 12.740059, y: 5.7925735}
   m_EdgeRadius: 0
 --- !u!1 &2393583082682764702
 GameObject:
@@ -223,7 +259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1737927347284011308}
   - component: {fileID: 8709614490171423363}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: MislingColor
   m_TagString: Untagged
   m_Icon: {fileID: 0}

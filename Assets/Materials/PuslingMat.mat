@@ -89,6 +89,8 @@ Material:
     - _OriginalColor14: {r: 1, g: 1, b: 1, a: 1}
     - _OriginalColor15: {r: 1, g: 1, b: 1, a: 1}
     - _OriginalColor16: {r: 1, g: 1, b: 1, a: 1}
+    - _OriginalColor17: {r: 1, g: 1, b: 1, a: 1}
+    - _OriginalColor18: {r: 1, g: 1, b: 1, a: 1}
     - _OriginalColor2: {r: 0.007843138, g: 1, b: 0.9490197, a: 1}
     - _OriginalColor3: {r: 1, g: 0.27058825, b: 0, a: 1}
     - _OriginalColor4: {r: 0.003921569, g: 0.46274513, b: 1, a: 1}
@@ -97,20 +99,22 @@ Material:
     - _OriginalColor7: {r: 1, g: 0.89019614, b: 0.5176471, a: 1}
     - _OriginalColor8: {r: 1, g: 0.5294118, b: 0, a: 1}
     - _OriginalColor9: {r: 0.08235294, g: 0.098039225, b: 0.98823535, a: 1}
-    - _TargetColor1: {r: 0.6509434, g: 0.21800464, b: 0.21800464, a: 1}
-    - _TargetColor10: {r: 1, g: 1, b: 1, a: 1}
-    - _TargetColor11: {r: 1, g: 1, b: 1, a: 1}
+    - _TargetColor1: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 1}
+    - _TargetColor10: {r: 0, g: 0, b: 0, a: 1}
+    - _TargetColor11: {r: 1, g: 0, b: 0, a: 1}
     - _TargetColor12: {r: 1, g: 1, b: 1, a: 1}
     - _TargetColor13: {r: 1, g: 1, b: 1, a: 1}
     - _TargetColor14: {r: 1, g: 1, b: 1, a: 1}
     - _TargetColor15: {r: 1, g: 1, b: 1, a: 1}
     - _TargetColor16: {r: 1, g: 1, b: 1, a: 1}
-    - _TargetColor2: {r: 0.5126677, g: 0.6117647, b: 0.12941176, a: 1}
+    - _TargetColor17: {r: 1, g: 1, b: 1, a: 1}
+    - _TargetColor18: {r: 1, g: 1, b: 1, a: 1}
+    - _TargetColor2: {r: 0, g: 0, b: 0, a: 1}
     - _TargetColor3: {r: 1, g: 0.6462264, b: 0.6462264, a: 1}
-    - _TargetColor4: {r: 0.26406196, g: 0.8113208, b: 0.73594034, a: 1}
-    - _TargetColor5: {r: 1, g: 1, b: 1, a: 1}
+    - _TargetColor4: {r: 0, g: 0, b: 0, a: 1}
+    - _TargetColor5: {r: 1, g: 0, b: 0, a: 1}
     - _TargetColor6: {r: 1, g: 1, b: 1, a: 1}
     - _TargetColor7: {r: 1, g: 1, b: 1, a: 1}
     - _TargetColor8: {r: 0.8679245, g: 0.25792095, b: 0.25792095, a: 1}
-    - _TargetColor9: {r: 1, g: 1, b: 1, a: 1}
+    - _TargetColor9: {r: 1, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

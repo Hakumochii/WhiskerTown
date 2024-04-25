@@ -7,17 +7,12 @@ public class CatController : MonoBehaviour
     AudioManager audioManager;
     Vector2 touchStartPos;
     Vector2 touchEndPos;
-    float minPetDistance = 3f; // Adjust as needed
+    float minPetDistance = 1f; // Adjust as needed
     float maxPetTime = 5f; // Adjust as needed
     float touchStartTime;
 
     bool isBeingPetted = false;
     bool isBeingDragged = false;
-
-    // Store the initial state of the cat
-    bool initialIsLayingDown;
-    bool initialIsStanding;
-    bool initialIsPet;
 
     void Start()
     {
@@ -25,9 +20,9 @@ public class CatController : MonoBehaviour
         catAiMovement = GetComponent<CatAiMovement>();
 
         // Store the initial state of the cat
-        initialIsLayingDown = animator.GetBool("isLayingDown");
-        initialIsStanding = animator.GetBool("isStanding");
-        initialIsPet = animator.GetBool("isPet");
+        animator.SetBool("isLayingDown", animator.GetBool("isLayingDown"));
+        animator.SetBool("isStanding", animator.GetBool("isStanding"));
+        animator.SetBool("isPet", animator.GetBool("isPet"));
     }
 
     void Update()
@@ -35,73 +30,71 @@ public class CatController : MonoBehaviour
         if (!isBeingPetted && Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
+            Debug.Log("Touch phase: " + touch.phase);
             switch (touch.phase)
             {
                 case TouchPhase.Began:
                     touchStartPos = touch.position;
                     touchStartTime = Time.time;
+                    CheckPet(touchStartPos);
                     break;
                 case TouchPhase.Moved:
                 case TouchPhase.Stationary:
                     touchEndPos = touch.position;
-                    CheckPet();
                     break;
             }
         }
-        if (animator.GetBool("isPickedUp"))
+    }
+
+    void CheckPet(Vector2 touchPos)
+    {
+        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(touchPos), Vector2.zero);
+        if (hit.collider != null && hit.collider.gameObject == gameObject)
         {
-            GetComponent<SpriteRenderer>().sortingLayerName = "Foreground";
+            // Cat touched, start petting logic
+            float petDistance = (touchEndPos - touchStartPos).magnitude;
+            float petTime = Time.time - touchStartTime;
+            if (petDistance < minPetDistance && petTime < maxPetTime && !isBeingDragged)
+            {
+                PetCat();
+            }
         }
     }
 
-    void CheckPet()
+    public void PetCat()
     {
-        float petDistance = (touchEndPos - touchStartPos).magnitude;
-        float petTime = Time.time - touchStartTime;
-
-        if (petDistance < minPetDistance && petTime < maxPetTime && !isBeingDragged)
-        {
-            PetCat();
-        }
-    }
-
-        public void PetCat()
-    {
-        animator.SetBool("isPet", true);
+        Debug.Log("Petting cat");
+        animator.SetBool("isPet", true); // Set pet animation parameter to true
+        AudioManager.instance.PlayAudio("event:/cat_sounds/Pet");
         catAiMovement.enabled = false;
         isBeingPetted = true;
-        animator.SetFloat("MoveX", 0);
-        animator.SetFloat("MoveY", 0);
 
         // Invoke EndPetting after the pet animation duration
-        float pettingDuration = 3f;
+        float pettingDuration = 3f; // Adjust as needed based on your petting animation duration
         Invoke("EndPetting", pettingDuration);
-}
+    }
 
     public void EndPetting()
     {
-        animator.SetBool("isPet", false);
+        animator.SetBool("isPet", false); // Reset pet animation parameter to false
         catAiMovement.enabled = true;
         isBeingPetted = false;
-        // Reset the cat to its original state
-        animator.SetBool("isLayingDown", initialIsLayingDown);
-        animator.SetBool("isStanding", initialIsStanding);
     }
 
     public void OnMouseDown()
     {
-    
-        if(!isBeingPetted)
+        if (!isBeingPetted)
         {
             AudioManager.instance.PlayAudio("event:/cat_sounds/Meow");
             animator.SetBool("isPickedUp", true);
+            animator.SetBool("isLayingDown", false);
+            animator.SetBool("isStanding", true);
             catAiMovement.enabled = false;
             animator.SetFloat("MoveX", 0);
             animator.SetFloat("MoveY", 0);
             isBeingDragged = true;
         }
     }
-    
 
     public void OnMouseUp()
     {
@@ -112,7 +105,7 @@ public class CatController : MonoBehaviour
 
     public void OnMouseDrag()
     {
-        if(!isBeingPetted)
+        if (!isBeingPetted)
         {
             animator.SetBool("isPickedUp", true);
             catAiMovement.enabled = false;
@@ -123,7 +116,5 @@ public class CatController : MonoBehaviour
             Vector3 objPosition = Camera.main.ScreenToWorldPoint(mousePosition);
             transform.position = objPosition;
         }
-        
     }
-    
 }

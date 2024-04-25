@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Cat1 : Cat
 {
-    public void Start()
+    public override void Start()
     {
+        GetAnimator();
         Speed();
         LayDown();
         GiveScripts();
