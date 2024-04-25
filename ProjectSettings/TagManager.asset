@@ -10,6 +10,8 @@ TagManager:
   - Button1
   - Button2
   - Button3
+  - Border
+  - Cloud
   layers:
   - Default
   - TransparentFX
@@ -18,7 +20,7 @@ TagManager:
   - Water
   - UI
   - Cat Layer
-  - 
+  - Cloud
   - 
   - 
   - 
@@ -52,4 +54,7 @@ TagManager:
     locked: 0
   - name: RayCast
     uniqueID: 3125166917
+    locked: 0
+  - name: Tumble
+    uniqueID: 2890569505
     locked: 0
