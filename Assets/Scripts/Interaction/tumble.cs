@@ -61,8 +61,6 @@ public class tumble : MonoBehaviour
     {
         //Set the animator to PopTrigger animation
         myAnimator.SetTrigger("Active");
-        // Plays pop sound
-        //audioManager.Play("PopSound");
         //Destroys the gameObject after delay
         Destroy(gameObject,delay1);
     }
