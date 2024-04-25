@@ -11,6 +11,6 @@ public class CatManager : MonoBehaviour
     public void OnDoneButtonPressed()
     {
         // Instantiate chosenCat and apply chosenColors in the "stickerscroll" scene
-        SceneManager.LoadScene("stickerscroll");
+        SceneManager.LoadScene("StickerScroll");
     }
 }

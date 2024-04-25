@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/NewColorScene.unity
+    guid: acac1fcf55ef74b4f845fafe63bda0cb
+  - enabled: 1
+    path: Assets/Scenes/StickerScroll.unity
+    guid: c3b8416d5617d25479a062287af79263
   m_configObjects: {}
