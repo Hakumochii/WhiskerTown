@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PaintingManager : MonoBehaviour
 {
+    public MenuManager menuManager;
     public string currentColorName;
     public string currentHexCode;
     public Color currentColor;
@@ -258,7 +259,7 @@ public class PaintingManager : MonoBehaviour
             // RaycastHit hit;
 
             RaycastHit2D hit = Physics2D.Raycast(ray, Vector2.zero);
-            Debug.Log("Clickng");
+            Debug.Log("Clicking");
             // Check if the ray hits any colliders in the scene
             if (hit.collider != null)
             {
@@ -281,11 +282,20 @@ public class PaintingManager : MonoBehaviour
                         Paint(spriteRenderer);
                         Debug.Log("Painting now");
                     }
-                    else
-                    {
-                        // No Image component found
-                        Debug.LogError("Clicked on GameObject without SpriteRenderer component.");
-                    }
+                }
+
+                else if (hit.collider.CompareTag("Button1"))
+                {
+                    menuManager.MuslingClick();
+                }
+
+                else if (hit.collider.CompareTag("Button2"))
+                {
+                    menuManager.PuslingClick();
+                }
+                else if (hit.collider.CompareTag("Button3"))
+                {
+                    menuManager.MislingClick();
                 }
                 else
                 {
@@ -293,9 +303,6 @@ public class PaintingManager : MonoBehaviour
                     Debug.LogError("Clicked on GameObject with a different tag.");
                 }
             }
-
-
-
         }
 
 

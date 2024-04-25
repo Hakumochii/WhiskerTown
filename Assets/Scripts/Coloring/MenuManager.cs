@@ -5,29 +5,45 @@ using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
-    public Button Frame1;
-    public Button Frame2;
-    public Button Frame3;
-
     public GameObject Musling;
     public GameObject Pusling;
     public GameObject Misling;
 
-    public void Frame1Click()
+    public GameObject[] muslingSprites = new GameObject[16];
+    public GameObject[] puslingSprites = new GameObject[9];
+    public GameObject[] mislingSprites = new GameObject[18];
+
+    public void Start()
     {
+        Musling.SetActive(false);
+        Pusling.SetActive(false);
+
+    }
+    public void MuslingClick()
+    {
+        Debug.Log(Musling.activeInHierarchy);
         switch (Musling.activeInHierarchy)
         {
             case true:
                 Debug.Log("Musling is already chosen");
                 break;
             case false:
-                if (Pusling.activeInHierarchy || Misling.activeInHierarchy)
+                if (Pusling.activeInHierarchy)
                 {
+                    ResetColorsPusling();
                     Pusling.SetActive(false);
+                    Musling.SetActive(true);
+                }
+                else if(Misling.activeInHierarchy)
+                {
+                    ResetColorsMisling();
                     Misling.SetActive(false);
                     Musling.SetActive(true);
                 }
+
                 
+
+
                 else if (!Pusling.activeInHierarchy || !Misling.activeInHierarchy)
                 {
                     Musling.SetActive(true);
@@ -36,7 +52,7 @@ public class MenuManager : MonoBehaviour
         }
     }
 
-    public void Frame2Click()
+    public void PuslingClick()
     {
         switch (Pusling.activeInHierarchy)
         {
@@ -46,7 +62,9 @@ public class MenuManager : MonoBehaviour
             case false:
                 if (Musling.activeInHierarchy || Misling.activeInHierarchy)
                 {
+                    ResetColorsMusling();
                     Musling.SetActive(false);
+                    ResetColorsMisling();
                     Misling.SetActive(false);
                     Pusling.SetActive(true);
                 }
@@ -58,7 +76,7 @@ public class MenuManager : MonoBehaviour
         }
     }
 
-    public void Frame3Click()
+    public void MislingClick()
     {
         switch (Misling.activeInHierarchy)
         {
@@ -68,9 +86,11 @@ public class MenuManager : MonoBehaviour
             case false:
                 if (Musling.activeInHierarchy || Pusling.activeInHierarchy)
                 {
+                    ResetColorsMusling();
                     Musling.SetActive(false);
-                    Misling.SetActive(false);
-                    Pusling.SetActive(true);
+                    ResetColorsPusling();
+                    Pusling.SetActive(false);
+                    Misling.SetActive(true);
                 }
                 else if (!Musling.activeInHierarchy || !Pusling.activeInHierarchy)
                 {
@@ -81,14 +101,89 @@ public class MenuManager : MonoBehaviour
         }
     }
 
-
-
-    // Start is called before the first frame update
-    void Start()
+    public void ResetColorsMusling()
     {
-        
+        foreach (GameObject obj in muslingSprites)
+        {
+            if (obj != null)
+            {
+                // Get the Renderer component of the GameObject
+                SpriteRenderer spriteRenderer = obj.GetComponent<SpriteRenderer>();
+
+                if (spriteRenderer != null)
+                {
+                    // Change the color to white
+                    spriteRenderer.color = Color.white;
+                    Debug.Log(obj.name + "Has changed color to" + spriteRenderer.material.color);
+                }
+                else
+                {
+                    Debug.LogWarning("Renderer component not found on GameObject: " + obj.name);
+                }
+            }
+            else
+            {
+                Debug.LogWarning("Null GameObject found in the array!");
+            }
+        }
     }
 
+    public void ResetColorsMisling()
+    {
+        Misling.SetActive(false);
+        foreach (GameObject obj in mislingSprites)
+        {
+            if (obj != null)
+            {
+                // Get the Renderer component of the GameObject
+                SpriteRenderer spriteRenderer = obj.GetComponent<SpriteRenderer>();
+
+                if (spriteRenderer != null)
+                {
+                    // Change the color to white
+                    spriteRenderer.color = Color.white;
+                    Debug.Log(obj.name + "Has changed color to" + spriteRenderer.material.color);
+                }
+                else
+                {
+                    Debug.LogWarning("Renderer component not found on GameObject: " + obj.name);
+                }
+            }
+            else
+            {
+                Debug.LogWarning("Null GameObject found in the array!");
+            }
+        }
+    }
+
+    public void ResetColorsPusling()
+    {
+        Pusling.SetActive(false);
+        foreach (GameObject obj in puslingSprites)
+        {
+            if (obj != null)
+            {
+                // Get the Renderer component of the GameObject
+                SpriteRenderer spriteRenderer = obj.GetComponent<SpriteRenderer>();
+
+                if (spriteRenderer != null)
+                {
+                    // Change the color to white
+                    spriteRenderer.color = Color.white;
+                    Debug.Log(obj.name + "Has changed color to" + spriteRenderer.material.color);
+                    Debug.Log("Color has changes");
+                }
+                else
+                {
+                    Debug.LogWarning("Renderer component not found on GameObject: " + obj.name);
+                }
+            }
+            else
+            {
+                Debug.LogWarning("Null GameObject found in the array!");
+            }
+        }
+    }
     // Update is called once per frame
     void Update()
     {

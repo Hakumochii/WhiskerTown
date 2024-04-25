@@ -6,6 +6,10 @@ TagManager:
   tags:
   - ColoringPen
   - Paintable
+  - Button
+  - Button1
+  - Button2
+  - Button3
   layers:
   - Default
   - TransparentFX
