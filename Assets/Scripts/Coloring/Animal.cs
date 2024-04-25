@@ -69,7 +69,7 @@ public class Animal : MonoBehaviour
 
     public void DisplayStats()
     {
-        Debug.Log("Species " + Species)
+        Debug.Log("Species " + Species);
         Debug.Log("Name: " + animalName);
         Debug.Log("Age: " + Age);
         Debug.Log("Gender: " + Gender);
