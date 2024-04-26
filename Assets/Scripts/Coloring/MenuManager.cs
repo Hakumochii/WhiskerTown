@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
+    public LevelManager levelManager;
     public GameObject Musling;
     public GameObject Pusling;
     public GameObject Misling;
@@ -15,6 +16,7 @@ public class MenuManager : MonoBehaviour
     public GameObject[] mislingSprites = new GameObject[18];
 
     public GameObject chosenCat;
+    public string chosenCatString;
     public GameObject chosenCatPrefab;
     public List<GameObject> chosenList = new List<GameObject>();
     public List<Color> dataOfColors = new List<Color>();
@@ -193,12 +195,12 @@ public class MenuManager : MonoBehaviour
         if (Pusling.activeInHierarchy == true)
         {
             chosenCat = Pusling;
+            chosenCatString = "Pusling";
             // Check if the prefab is loaded successfully
             if (chosenCatPrefab == null)
             {
                 Debug.LogError("Failed to load the prefab");
             }
-            chosenCat = Pusling;
             foreach (GameObject obj in puslingSprites)
             {
                 if (obj != null)
@@ -211,6 +213,7 @@ public class MenuManager : MonoBehaviour
         else if (Musling.activeInHierarchy == true)
         {
             chosenCat = Musling;
+            chosenCatString = "Musling";
             foreach (GameObject obj in muslingSprites)
             {
                 if (obj != null)
@@ -222,6 +225,7 @@ public class MenuManager : MonoBehaviour
         else if (Misling.activeInHierarchy == true)
         {
             chosenCat = Misling;
+            chosenCatString = "Misling";
             foreach (GameObject obj in puslingSprites)
             {
                 if (obj != null)
@@ -268,9 +272,40 @@ public class MenuManager : MonoBehaviour
 
     public void InstantiateCat()
     {
-        GameObject instantiatedCat = Instantiate(chosenCatPrefab, Vector3.zero, Quaternion.identity);
-        GameObject[] allChildren = instantiatedCat.GetComponentsInChildren<GameObject>(true);
+        SaveData();
+        levelManager.LoadStickerScroll();
+        Debug.Log(chosenCatString);
+        if (chosenCatString == "Musling")
+        {
+            Vector3 newPosition = new Vector3(0.03f, -2.01f, 0f);
+            Vector3 newScale = new Vector3(0.5f, 0.5f, 1f);
+            InstantiatePrefab(newPosition, newScale);
+        }
+        else if (chosenCatString == "Pusling")
+        {
+            Vector3 newPosition = new Vector3(1.18f, -2.62f, 0f);
+            Vector3 newScale = new Vector3(0.5f, 0.5f, 1f);
+            InstantiatePrefab(newPosition, newScale);
+        }
+        else if(chosenCatString == "Misling")
+        {
+            Vector3 newPosition = new Vector3(0.46f, -1.91f, 0f);
+            Vector3 newScale = new Vector3(0.5f, 0.5f, 1f);
+            InstantiatePrefab(newPosition, newScale);
+        }
+        else
+        {
+            Debug.Log("Sofie");
+        }
+    }
 
+    public void InstantiatePrefab(Vector3 newPosition, Vector3 newScale)
+    {
+        GameObject instantiatedCat = Instantiate(chosenCatPrefab, newPosition, Quaternion.identity);
+        instantiatedCat.transform.localScale = newScale;
+
+        DontDestroyOnLoad(instantiatedCat);
+        GameObject[] allChildren = instantiatedCat.GetComponentsInChildren<GameObject>(true);
         // Add all game objects to the list
         foreach (GameObject child in allChildren)
         {
@@ -286,7 +321,7 @@ public class MenuManager : MonoBehaviour
                 if (spriteRenderer != null)
                 {
                     int index = 0;
-                    if(index > catPrefabSprites.Count)
+                    if (index > catPrefabSprites.Count)
                     {
                         spriteRenderer.color = dataOfColors[index];
                         index++;
@@ -302,13 +337,9 @@ public class MenuManager : MonoBehaviour
                 Debug.LogWarning("Null GameObject found in the array!");
             }
         }
-
     }
 
-    public string sceneName;
-    public void ChangeScene()
-    {
-        SceneManager.LoadScene(sceneName);
-    }
 }
+
+
 

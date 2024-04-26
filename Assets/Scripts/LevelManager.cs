@@ -5,21 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    public string sceneName;
-    public void changeScene() 
+    private int mainMenuIndex = 0;
+    private int newColorScene = 1;
+    private int stickerScroll = 2;
+
+    public void LoadMainMenu()
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(mainMenuIndex);
     }
 
-    void Update()
+    public void LoadNewColorScene()
     {
-     if (sceneName == "StickerScroll")
-        {
-            CatManager catManager = FindObjectOfType<CatManager>();
-            catManager.SaveCatData();
-        }
+        SceneManager.LoadScene(newColorScene);
     }
-    
 
-    
+    public void LoadStickerScroll()
+    {
+        Debug.Log("Hello");
+        SceneManager.LoadScene(stickerScroll);
+    }
+
 }
