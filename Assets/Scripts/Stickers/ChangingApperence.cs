@@ -7,7 +7,7 @@ public class ChangingApperence : MonoBehaviour
 {
     public Button[] buttons;
     public GameObject[] cowboyHats;
-    private int selectedHatIndex = -1;
+    public int selectedHatIndex = -1;
 
     private void Start()
     {
