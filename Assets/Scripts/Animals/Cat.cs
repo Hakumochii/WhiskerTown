@@ -12,10 +12,7 @@ public class Cat : Animal
 
     public virtual void Start()
     {
-        GetAnimator();
-        Speed();
-        LayDown();
-        GiveScripts();
+
     }
 
     public virtual void GetAnimator()
