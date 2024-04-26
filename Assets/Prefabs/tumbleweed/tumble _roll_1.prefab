@@ -225,10 +225,10 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 62835645
-      Data2: 1135403255
-      Data3: 1990086072
-      Data4: 1029247519
+      Data1: -1572732771
+      Data2: 1148883046
+      Data3: 1181807015
+      Data4: 2074455031
     Path: event:/sound_efx/tumble_pop
   Event: 
   PlayEvent: 15
