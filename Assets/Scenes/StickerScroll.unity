@@ -468,7 +468,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1354826470}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CowboyHatMusling, Assembly-CSharp
         m_MethodName: onClick
         m_Mode: 1
@@ -792,7 +792,7 @@ GameObject:
   - component: {fileID: 183902856}
   - component: {fileID: 183902855}
   m_Layer: 0
-  m_Name: Misling-1
+  m_Name: MislingStickers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -949,7 +949,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1769519857}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CowboyHatMusling, Assembly-CSharp
         m_MethodName: onClick
         m_Mode: 1
@@ -1185,7 +1185,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1800259725}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CowboyHatMusling, Assembly-CSharp
         m_MethodName: onClick
         m_Mode: 1
@@ -1245,7 +1245,6 @@ GameObject:
   m_Component:
   - component: {fileID: 331788300}
   - component: {fileID: 331788302}
-  - component: {fileID: 331788301}
   m_Layer: 0
   m_Name: CowboyHat3
   m_TagString: Untagged
@@ -1268,18 +1267,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1186634430}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &331788301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 331788299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5815ec4d6b02f4d4aaf46ee3cfbed62d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &331788302
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1743,6 +1730,9 @@ MonoBehaviour:
   - {fileID: 883434601}
   - {fileID: 1266458702}
   - {fileID: 52030693}
+  muslingStickers: {fileID: 2108196845}
+  puslingStickers: {fileID: 786787250}
+  mislingStickers: {fileID: 786787250}
 --- !u!1 &422176491
 GameObject:
   m_ObjectHideFlags: 0
@@ -1996,7 +1986,6 @@ GameObject:
   m_Component:
   - component: {fileID: 458947374}
   - component: {fileID: 458947376}
-  - component: {fileID: 458947375}
   m_Layer: 0
   m_Name: CowboyHat8
   m_TagString: Untagged
@@ -2019,18 +2008,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1765757303}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &458947375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 458947373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5815ec4d6b02f4d4aaf46ee3cfbed62d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &458947376
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2355,7 +2332,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 554963727}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CowboyHatMusling, Assembly-CSharp
         m_MethodName: onClick
         m_Mode: 1
@@ -2499,7 +2476,6 @@ GameObject:
   m_Component:
   - component: {fileID: 554963726}
   - component: {fileID: 554963725}
-  - component: {fileID: 554963727}
   m_Layer: 0
   m_Name: CowboyHat9
   m_TagString: Untagged
@@ -2574,18 +2550,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1927962333}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &554963727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 554963724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5815ec4d6b02f4d4aaf46ee3cfbed62d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &561313542
 GameObject:
   m_ObjectHideFlags: 0
@@ -2678,7 +2642,6 @@ GameObject:
   m_Component:
   - component: {fileID: 589025482}
   - component: {fileID: 589025484}
-  - component: {fileID: 589025483}
   m_Layer: 0
   m_Name: CowboyHat8
   m_TagString: Untagged
@@ -2701,18 +2664,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1186634430}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &589025483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 589025481}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5815ec4d6b02f4d4aaf46ee3cfbed62d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &589025484
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3351,7 +3302,6 @@ GameObject:
   m_Component:
   - component: {fileID: 629176792}
   - component: {fileID: 629176794}
-  - component: {fileID: 629176793}
   m_Layer: 0
   m_Name: CowboyHat1
   m_TagString: Untagged
@@ -3374,18 +3324,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1186634430}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &629176793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 629176791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5815ec4d6b02f4d4aaf46ee3cfbed62d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &629176794
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3671,7 +3609,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 838236987}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CowboyHatMusling, Assembly-CSharp
         m_MethodName: onClick
         m_Mode: 1
@@ -3776,7 +3714,7 @@ GameObject:
   - component: {fileID: 786787252}
   - component: {fileID: 786787251}
   m_Layer: 0
-  m_Name: Pusling-1
+  m_Name: PuslingStickers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3861,7 +3799,6 @@ GameObject:
   m_Component:
   - component: {fileID: 798396101}
   - component: {fileID: 798396103}
-  - component: {fileID: 798396102}
   m_Layer: 0
   m_Name: CowboyHat6
   m_TagString: Untagged
@@ -3884,18 +3821,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1765757303}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &798396102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 798396100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5815ec4d6b02f4d4aaf46ee3cfbed62d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &798396103
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3958,7 +3883,6 @@ GameObject:
   m_Component:
   - component: {fileID: 810655260}
   - component: {fileID: 810655262}
-  - component: {fileID: 810655261}
   m_Layer: 0
   m_Name: CowboyHat4
   m_TagString: Untagged
@@ -3981,18 +3905,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1765757303}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &810655261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810655259}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5815ec4d6b02f4d4aaf46ee3cfbed62d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &810655262
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4347,6 +4259,9 @@ MonoBehaviour:
   - {fileID: 958210981}
   - {fileID: 2074506012}
   - {fileID: 1815786937}
+  muslingStickers: {fileID: 2108196845}
+  puslingStickers: {fileID: 786787250}
+  mislingStickers: {fileID: 183902854}
 --- !u!1 &838236984
 GameObject:
   m_ObjectHideFlags: 0
@@ -4357,7 +4272,6 @@ GameObject:
   m_Component:
   - component: {fileID: 838236986}
   - component: {fileID: 838236985}
-  - component: {fileID: 838236987}
   m_Layer: 0
   m_Name: CowboyHat1
   m_TagString: Untagged
@@ -4432,18 +4346,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1927962333}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &838236987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 838236984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5815ec4d6b02f4d4aaf46ee3cfbed62d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &848511860
 GameObject:
   m_ObjectHideFlags: 0
@@ -4811,7 +4713,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1478118490}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CowboyHatMusling, Assembly-CSharp
         m_MethodName: onClick
         m_Mode: 1
@@ -4871,7 +4773,6 @@ GameObject:
   m_Component:
   - component: {fileID: 933928549}
   - component: {fileID: 933928551}
-  - component: {fileID: 933928550}
   m_Layer: 0
   m_Name: CowboyHat4
   m_TagString: Untagged
@@ -4894,18 +4795,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1186634430}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &933928550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 933928548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5815ec4d6b02f4d4aaf46ee3cfbed62d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &933928551
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5478,7 +5367,6 @@ GameObject:
   m_Component:
   - component: {fileID: 994563506}
   - component: {fileID: 994563508}
-  - component: {fileID: 994563507}
   m_Layer: 0
   m_Name: CowboyHat2
   m_TagString: Untagged
@@ -5501,18 +5389,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1186634430}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &994563507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 994563505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5815ec4d6b02f4d4aaf46ee3cfbed62d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &994563508
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5731,7 +5607,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1439537644}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CowboyHatMusling, Assembly-CSharp
         m_MethodName: onClick
         m_Mode: 1
@@ -6044,6 +5920,55 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1063408741
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1063408743}
+  - component: {fileID: 1063408742}
+  m_Layer: 0
+  m_Name: Lala
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1063408742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063408741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c1014cb25ffd469a9631075ac345f5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttons: []
+  cowboyHats: []
+  muslingStickers: {fileID: 2108196845}
+  puslingStickers: {fileID: 786787250}
+  mislingStickers: {fileID: 183902854}
+--- !u!4 &1063408743
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063408741}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 622.61835, y: 413.38324, z: -10.809703}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1126931340
 GameObject:
   m_ObjectHideFlags: 0
@@ -6158,7 +6083,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1172160157}
   - component: {fileID: 1172160159}
-  - component: {fileID: 1172160158}
   m_Layer: 0
   m_Name: CowboyHat6
   m_TagString: Untagged
@@ -6181,18 +6105,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1186634430}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1172160158
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1172160156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5815ec4d6b02f4d4aaf46ee3cfbed62d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1172160159
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6451,6 +6363,9 @@ MonoBehaviour:
   - {fileID: 2102079610}
   - {fileID: 589025481}
   - {fileID: 1941931239}
+  muslingStickers: {fileID: 2108196845}
+  puslingStickers: {fileID: 786787250}
+  mislingStickers: {fileID: 183902854}
 --- !u!1 &1187403677
 GameObject:
   m_ObjectHideFlags: 0
@@ -6461,7 +6376,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1187403678}
   - component: {fileID: 1187403680}
-  - component: {fileID: 1187403679}
   m_Layer: 0
   m_Name: CowboyHat3
   m_TagString: Untagged
@@ -6484,18 +6398,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1765757303}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1187403679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1187403677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5815ec4d6b02f4d4aaf46ee3cfbed62d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1187403680
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6737,7 +6639,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1246401149}
   - component: {fileID: 1246401151}
-  - component: {fileID: 1246401150}
   m_Layer: 0
   m_Name: CowboyHat5
   m_TagString: Untagged
@@ -6760,18 +6661,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1186634430}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1246401150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1246401148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5815ec4d6b02f4d4aaf46ee3cfbed62d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1246401151
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7158,7 +7047,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1363998648}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CowboyHatMusling, Assembly-CSharp
         m_MethodName: onClick
         m_Mode: 1
@@ -7218,7 +7107,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1354826469}
   - component: {fileID: 1354826468}
-  - component: {fileID: 1354826470}
   m_Layer: 0
   m_Name: CowboyHat5
   m_TagString: Untagged
@@ -7293,18 +7181,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1927962333}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1354826470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1354826467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5815ec4d6b02f4d4aaf46ee3cfbed62d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1363998645
 GameObject:
   m_ObjectHideFlags: 0
@@ -7315,7 +7191,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1363998647}
   - component: {fileID: 1363998646}
-  - component: {fileID: 1363998648}
   m_Layer: 0
   m_Name: CowboyHat6
   m_TagString: Untagged
@@ -7390,18 +7265,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1927962333}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1363998648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1363998645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5815ec4d6b02f4d4aaf46ee3cfbed62d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1384434395
 GameObject:
   m_ObjectHideFlags: 0
@@ -7484,7 +7347,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1606361078}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CowboyHatMusling, Assembly-CSharp
         m_MethodName: onClick
         m_Mode: 1
@@ -7807,7 +7670,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1428339856}
   - component: {fileID: 1428339858}
-  - component: {fileID: 1428339857}
   m_Layer: 0
   m_Name: CowboyHat1
   m_TagString: Untagged
@@ -7830,18 +7692,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1765757303}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1428339857
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1428339855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5815ec4d6b02f4d4aaf46ee3cfbed62d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1428339858
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7904,7 +7754,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1439537643}
   - component: {fileID: 1439537642}
-  - component: {fileID: 1439537644}
   m_Layer: 0
   m_Name: CowboyHat4
   m_TagString: Untagged
@@ -7979,18 +7828,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1927962333}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1439537644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1439537641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5815ec4d6b02f4d4aaf46ee3cfbed62d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1478118487
 GameObject:
   m_ObjectHideFlags: 0
@@ -8001,7 +7838,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1478118489}
   - component: {fileID: 1478118488}
-  - component: {fileID: 1478118490}
   m_Layer: 0
   m_Name: CowboyHat7
   m_TagString: Untagged
@@ -8076,18 +7912,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1927962333}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1478118490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1478118487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5815ec4d6b02f4d4aaf46ee3cfbed62d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1564279087
 GameObject:
   m_ObjectHideFlags: 0
@@ -8098,7 +7922,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1564279088}
   - component: {fileID: 1564279090}
-  - component: {fileID: 1564279089}
   m_Layer: 0
   m_Name: CowboyHat2
   m_TagString: Untagged
@@ -8121,18 +7944,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1765757303}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1564279089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1564279087}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5815ec4d6b02f4d4aaf46ee3cfbed62d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1564279090
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8287,7 +8098,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1606361077}
   - component: {fileID: 1606361076}
-  - component: {fileID: 1606361078}
   m_Layer: 0
   m_Name: CowboyHat3
   m_TagString: Untagged
@@ -8362,18 +8172,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1927962333}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1606361078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1606361075}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5815ec4d6b02f4d4aaf46ee3cfbed62d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1619868464
 GameObject:
   m_ObjectHideFlags: 0
@@ -8776,6 +8574,9 @@ MonoBehaviour:
   - {fileID: 1938865698}
   - {fileID: 458947373}
   - {fileID: 2106968513}
+  muslingStickers: {fileID: 2108196845}
+  puslingStickers: {fileID: 786787250}
+  mislingStickers: {fileID: 183902854}
 --- !u!114 &1765757305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8798,7 +8599,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1769519856}
   - component: {fileID: 1769519855}
-  - component: {fileID: 1769519857}
   m_Layer: 0
   m_Name: CowboyHat2
   m_TagString: Untagged
@@ -8873,18 +8673,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1927962333}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1769519857
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1769519854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5815ec4d6b02f4d4aaf46ee3cfbed62d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1777024159
 GameObject:
   m_ObjectHideFlags: 0
@@ -8970,7 +8758,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1800259724}
   - component: {fileID: 1800259723}
-  - component: {fileID: 1800259725}
   m_Layer: 0
   m_Name: CowboyHat8
   m_TagString: Untagged
@@ -9045,18 +8832,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1927962333}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1800259725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1800259722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5815ec4d6b02f4d4aaf46ee3cfbed62d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1815786937
 GameObject:
   m_ObjectHideFlags: 0
@@ -9395,6 +9170,9 @@ MonoBehaviour:
   - {fileID: 1478118487}
   - {fileID: 1800259722}
   - {fileID: 554963724}
+  muslingStickers: {fileID: 2108196845}
+  puslingStickers: {fileID: 786787250}
+  mislingStickers: {fileID: 183902854}
 --- !u!1 &1938865698
 GameObject:
   m_ObjectHideFlags: 0
@@ -9405,7 +9183,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1938865699}
   - component: {fileID: 1938865701}
-  - component: {fileID: 1938865700}
   m_Layer: 0
   m_Name: CowboyHat7
   m_TagString: Untagged
@@ -9428,18 +9205,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1765757303}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1938865700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1938865698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5815ec4d6b02f4d4aaf46ee3cfbed62d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1938865701
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9502,7 +9267,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1941931240}
   - component: {fileID: 1941931242}
-  - component: {fileID: 1941931241}
   m_Layer: 0
   m_Name: CowboyHat9
   m_TagString: Untagged
@@ -9525,18 +9289,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1186634430}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1941931241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1941931239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5815ec4d6b02f4d4aaf46ee3cfbed62d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1941931242
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9806,6 +9558,9 @@ MonoBehaviour:
   - {fileID: 13562269}
   - {fileID: 1964006602}
   - {fileID: 460246394}
+  muslingStickers: {fileID: 2108196845}
+  puslingStickers: {fileID: 786787250}
+  mislingStickers: {fileID: 183902854}
 --- !u!4 &2000890320
 Transform:
   m_ObjectHideFlags: 0
@@ -9924,7 +9679,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2090762551}
   - component: {fileID: 2090762553}
-  - component: {fileID: 2090762552}
   m_Layer: 0
   m_Name: CowboyHat5
   m_TagString: Untagged
@@ -9947,18 +9701,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1765757303}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2090762552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2090762550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5815ec4d6b02f4d4aaf46ee3cfbed62d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &2090762553
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10105,7 +9847,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2102079611}
   - component: {fileID: 2102079613}
-  - component: {fileID: 2102079612}
   m_Layer: 0
   m_Name: CowboyHat7
   m_TagString: Untagged
@@ -10128,18 +9869,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1186634430}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2102079612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2102079610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5815ec4d6b02f4d4aaf46ee3cfbed62d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &2102079613
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10202,7 +9931,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2106968514}
   - component: {fileID: 2106968516}
-  - component: {fileID: 2106968515}
   m_Layer: 0
   m_Name: CowboyHat9
   m_TagString: Untagged
@@ -10225,18 +9953,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1765757303}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2106968515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2106968513}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5815ec4d6b02f4d4aaf46ee3cfbed62d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &2106968516
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10298,66 +10014,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2108196847}
-  - component: {fileID: 2108196846}
   m_Layer: 0
-  m_Name: Musling-1
+  m_Name: MuslingStickers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &2108196846
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2108196845}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 484c005a12d7a486488bdca7db38d3a1, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 20.48, y: 15.36}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_IsActive: 0
 --- !u!4 &2108196847
 Transform:
   m_ObjectHideFlags: 0
@@ -10658,3 +10321,4 @@ SceneRoots:
   - {fileID: 183902856}
   - {fileID: 786787252}
   - {fileID: 786747933}
+  - {fileID: 1063408743}

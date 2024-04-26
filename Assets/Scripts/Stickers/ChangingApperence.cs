@@ -8,9 +8,38 @@ public class ChangingApperence : MonoBehaviour
     public Button[] buttons;
     public GameObject[] cowboyHats;
     private int selectedHatIndex = -1;
+    public GameObject muslingStickers;
+    public GameObject puslingStickers;
+    public GameObject mislingStickers;
 
-    private void Start()
+
+    public void Start()
     {
+        Debug.Log("Hello");
+        MenuManager menuManager = MenuManager.instance;
+        if (menuManager == null)
+        {
+            Debug.LogError("MenuManager not found.");
+            return; // Exit the method early to avoid further errors
+        }
+
+        string chosenCatString = MenuManager.instance.chosenCatString;
+        Debug.Log(chosenCatString);
+
+        // Check for null before accessing properties or methods of menuManager
+        if (chosenCatString == "Musling")
+        {
+            muslingStickers.SetActive(true);
+        }
+        else if (chosenCatString == "Pusling")
+        {
+            puslingStickers.SetActive(true);
+        }
+        else if (chosenCatString == "Misling")
+        {
+            mislingStickers.SetActive(true);
+        }
+
         // Initialize all cowboy hats to false
         foreach (GameObject hat in cowboyHats)
         {
@@ -25,13 +54,18 @@ public class ChangingApperence : MonoBehaviour
         }
     }
 
+
+
     private void OnButtonClicked(int index)
     {
+        
+
         if (selectedHatIndex == index)
         {
             // Clicked the same cowboy hat again, set it to false
             cowboyHats[index].SetActive(false);
-            selectedHatIndex = -1;
+            selectedHatIndex = -1; 
+
         }
         else
         {

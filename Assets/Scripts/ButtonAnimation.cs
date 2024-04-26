@@ -8,10 +8,11 @@ public class ButtonAnimation : MonoBehaviour
     Button btn;
     Vector3 upScale = new Vector3(1.2f, 1.2f, 1);
 
-    private void Awake()
+    private void Start()
     {
         btn = gameObject.GetComponent<Button>();
         btn.onClick.AddListener(Anim);
+        btn.onClick.AddListener(MenuManager.instance.InstantiateCat);
     }
 
     void Anim()

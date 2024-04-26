@@ -16,17 +16,33 @@ public class MenuManager : MonoBehaviour
     public GameObject[] mislingSprites = new GameObject[18];
 
     public GameObject chosenCat;
-    public string chosenCatString;
+    public string chosenCatString = "Musling";
     public GameObject chosenCatPrefab;
     public List<GameObject> chosenList = new List<GameObject>();
     public List<Color> dataOfColors = new List<Color>();
     public List<GameObject> catPrefabSprites = new List<GameObject>();
 
+    public static MenuManager instance;
+    public void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(this);
+        }
+        else if (instance != this)
+        {
+            Debug.Log("okay?");
+            Destroy(this);
+        }
+    }
     public void Start()
     {
+
         Musling.SetActive(true);
         Pusling.SetActive(false);
         Misling.SetActive(false);
+        
 
     }
     public void MuslingClick()
@@ -39,12 +55,14 @@ public class MenuManager : MonoBehaviour
             case false:
                 if (Pusling.activeInHierarchy)
                 {
+                    chosenCatString = "Musling";
                     ResetColorsPusling();
                     Pusling.SetActive(false);
                     Musling.SetActive(true);
                 }
                 else if (Misling.activeInHierarchy)
                 {
+                    chosenCatString = "Musling";
                     ResetColorsMisling();
                     Misling.SetActive(false);
                     Musling.SetActive(true);
@@ -52,6 +70,7 @@ public class MenuManager : MonoBehaviour
                 else if (!Pusling.activeInHierarchy || !Misling.activeInHierarchy)
                 {
                     Musling.SetActive(true);
+                    chosenCatString = "Musling";
                 }
                 break;
         }
@@ -67,6 +86,7 @@ public class MenuManager : MonoBehaviour
             case false:
                 if (Musling.activeInHierarchy || Misling.activeInHierarchy)
                 {
+                    chosenCatString = "Pusling";
                     ResetColorsMusling();
                     Musling.SetActive(false);
                     ResetColorsMisling();
@@ -75,6 +95,7 @@ public class MenuManager : MonoBehaviour
                 }
                 else if (!Musling.activeInHierarchy || !Misling.activeInHierarchy)
                 {
+                    chosenCatString = "Pusling";
                     Pusling.SetActive(true);
                 }
                 break;
@@ -91,6 +112,7 @@ public class MenuManager : MonoBehaviour
             case false:
                 if (Musling.activeInHierarchy || Pusling.activeInHierarchy)
                 {
+                    chosenCatString = "Misling";
                     ResetColorsMusling();
                     Musling.SetActive(false);
                     ResetColorsPusling();
@@ -99,6 +121,7 @@ public class MenuManager : MonoBehaviour
                 }
                 else if (!Musling.activeInHierarchy || !Pusling.activeInHierarchy)
                 {
+                    chosenCatString = "Misling";
                     Misling.SetActive(true);
                 }
 
@@ -195,7 +218,7 @@ public class MenuManager : MonoBehaviour
         if (Pusling.activeInHierarchy == true)
         {
             chosenCat = Pusling;
-            chosenCatString = "Pusling";
+            //chosenCatString = "Pusling";
             // Check if the prefab is loaded successfully
             if (chosenCatPrefab == null)
             {
@@ -213,7 +236,7 @@ public class MenuManager : MonoBehaviour
         else if (Musling.activeInHierarchy == true)
         {
             chosenCat = Musling;
-            chosenCatString = "Musling";
+            //chosenCatString = "Musling";
             foreach (GameObject obj in muslingSprites)
             {
                 if (obj != null)
@@ -225,7 +248,7 @@ public class MenuManager : MonoBehaviour
         else if (Misling.activeInHierarchy == true)
         {
             chosenCat = Misling;
-            chosenCatString = "Misling";
+            //chosenCatString = "Misling";
             foreach (GameObject obj in puslingSprites)
             {
                 if (obj != null)
@@ -303,7 +326,18 @@ public class MenuManager : MonoBehaviour
     {
         GameObject instantiatedCat = Instantiate(chosenCatPrefab, newPosition, Quaternion.identity);
         instantiatedCat.transform.localScale = newScale;
-
+        if (chosenCatString == "Musling")
+        {
+            instantiatedCat.name = "Musling";
+        }
+        else if (chosenCatString == "Pusling")
+        {
+            instantiatedCat.name = "Pusling";
+        }
+        else if (chosenCatString == "Misling")
+        {
+            instantiatedCat.name = "Misling";
+        }
         DontDestroyOnLoad(instantiatedCat);
         GameObject[] allChildren = instantiatedCat.GetComponentsInChildren<GameObject>(true);
         // Add all game objects to the list
