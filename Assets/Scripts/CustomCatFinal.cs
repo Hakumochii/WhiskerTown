@@ -15,7 +15,8 @@ public class CustomCatFinal : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ChangingApperence apperencescript = GetComponent<ChangingApperence>();
+        
+        ChangingApperence apperencescript = FindObjectOfType<ChangingApperence>();
         
         Hatnumber = apperencescript.selectedHatIndex;
 

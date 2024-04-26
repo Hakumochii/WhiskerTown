@@ -7,7 +7,7 @@ public class ChangingApperence : MonoBehaviour
 {
     public Button[] buttons;
     public GameObject[] cowboyHats;
-    private int selectedHatIndex = -1;
+    public int selectedHatIndex = -1;
     public GameObject muslingStickers;
     public GameObject puslingStickers;
     public GameObject mislingStickers;
@@ -15,6 +15,7 @@ public class ChangingApperence : MonoBehaviour
 
     public void Start()
     {
+        DontDestroyOnLoad(this.gameObject);
         Debug.Log("Hello");
         MenuManager menuManager = MenuManager.instance;
         if (menuManager == null)
